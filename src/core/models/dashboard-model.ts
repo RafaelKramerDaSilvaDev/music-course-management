@@ -1,4 +1,4 @@
-export interface Dashboard {
+export interface DashboardModel {
   overview: {
     numberOfStudents: number
     newStudents: number

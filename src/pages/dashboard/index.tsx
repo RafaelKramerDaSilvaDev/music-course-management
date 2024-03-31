@@ -3,8 +3,12 @@ import { Card } from '../../components/UI/Card'
 import { Group } from '../../components/UI/Group'
 import { Wrapper } from '../../components/UI/Wrapper'
 import dashboardService from '../../core/services/dashboard-service'
+import { Months } from '../../constants/months'
 
-export const Dashboard = () => {
+export const DashboardPage = () => {
+  const currentDate = new Date()
+  const lastMonth = currentDate.getMonth() + 1
+
   const { data, isLoading } = useQuery({
     queryKey: ['load-dashboard'],
     queryFn: dashboardService.load,
@@ -45,7 +49,7 @@ export const Dashboard = () => {
         <Card title="Trancamentos" content={cancellations} color="red" />
       </Group>
 
-      <Group title="Financias">
+      <Group title="Finanças">
         <Card
           title="Pagamentos Recebidos"
           content={paymentsReceived}
@@ -60,7 +64,9 @@ export const Dashboard = () => {
         <Card title="Saldo Previsto" content={expectedBalance} color="green" />
       </Group>
 
-      <Group title="Estimativas">
+      <Group
+        title={`Estimativas para ${Months[lastMonth as keyof typeof Months]}`}
+      >
         <Card
           title="Trancamentos"
           content={cancellationsEstimate}

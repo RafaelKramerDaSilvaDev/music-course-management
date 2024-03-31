@@ -1,9 +1,9 @@
 import axios from 'axios'
-import { Dashboard } from '../models/dashboard'
+import { DashboardModel } from '../models/dashboard-model'
 
 class DashboardService {
-  async load(): Promise<Dashboard> {
-    const response = await axios.get<Dashboard>(
+  async load(): Promise<DashboardModel> {
+    const response = await axios.get<DashboardModel>(
       'http://localhost:3000/dashboard',
     )
     return response.data

@@ -1,16 +1,16 @@
 import { ComponentType, useEffect, useState } from 'react'
-import { TabColors } from '../../../styles/constants/colors'
 import * as S from './styles'
+import { colors } from '../../../styles/constants/colors'
 
 type Tab = {
   name: string
-  color: keyof typeof TabColors
+  color: keyof typeof colors
   content: ComponentType
 }
 
 type TabsProps = {
   names: string[]
-  colors: (keyof typeof TabColors)[]
+  colors: (keyof typeof colors)[]
   content: ComponentType[]
 }
 
