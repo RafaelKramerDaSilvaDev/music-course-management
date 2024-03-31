@@ -1,0 +1,21 @@
+{
+  "dashboard": {
+    "overview": {
+      "numberOfStudents": 22,
+      "newStudents": 22,
+      "studentsByModality": {
+        "keyboard": 22,
+        "accordion": 22
+      },
+      "cancellations": 22,
+      "paymentsReceived": 22,
+      "currentBalance": 22,
+      "amountsReceivable": 22,
+      "expectedBalance": 22
+    },
+    "estimates": {
+      "cancellationsEstimate": 22,
+      "expectedbalanceEstimate": 22
+    }
+  }
+}

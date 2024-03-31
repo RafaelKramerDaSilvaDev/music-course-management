@@ -1,16 +1,17 @@
 import styled from 'styled-components'
-import { TabColors } from './constants/tab-colors'
+import { colors } from '../../../styles/constants/colors'
 
 export const WrapperTabs = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   gap: 16px;
 
   width: 100%;
   height: 100%;
+
+  color: #484848;
 `
 
 export const Header = styled.header`
@@ -18,16 +19,16 @@ export const Header = styled.header`
   gap: 4px;
 `
 
-export const Tab = styled.div<{ $color: keyof typeof TabColors }>`
-  border-color: ${({ $color }) => TabColors[$color]};
+export const Tab = styled.div<{ $color: keyof typeof colors }>`
+  border-color: ${({ $color }) => colors[$color]};
   border-style: solid;
   border-width: 1px;
   border-bottom-width: 4px;
 
-  font-family: 'Inter', sans-serif;
   padding: 8px 16px;
 
   cursor: pointer;
+  user-select: none;
 `
 
 export const Content = styled.div``

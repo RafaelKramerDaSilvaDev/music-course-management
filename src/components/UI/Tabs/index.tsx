@@ -1,5 +1,5 @@
 import { ComponentType, useEffect, useState } from 'react'
-import { TabColors } from './constants/tab-colors'
+import { TabColors } from '../../../styles/constants/colors'
 import * as S from './styles'
 
 type Tab = {

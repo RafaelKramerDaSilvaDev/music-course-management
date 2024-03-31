@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components'
 
 const Reset = css`
-  * {
+  #root {
     font-family: 'Inter', sans-serif;
   }
 
